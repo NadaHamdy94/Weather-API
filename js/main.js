@@ -469,23 +469,25 @@ function checkWeatherCondition(is_day,condition,iconLocation)
 }
 async function searchCountryWeather()
 {
+  if(searchInput.value != '')
+  {
     let countryWeather=await fetch(`http://api.weatherapi.com/v1/search.json?key=14699c74a7e54078b78143249223005&q=${searchInput.value}`)
     let response =await countryWeather.json();
     let cityName = '';
-    console.log(response);
-    console.log(searchInput.value);
     for (let index = 0; index < response.length; index++) 
     {
         if((searchInput.value).toLowerCase() == (response[index].name).toLowerCase())
         {
             cityName=response[index].name;
         }
+        else if(cityName == '')
+        {
+            cityName=response[0].country;
+        }
+        await getCurrentWeather(cityName);
     }
-    if(cityName == '')
-    {
-        cityName=response[0].country;
-    }
-     await getCurrentWeather(cityName);
+     
+  }
 }
 
  (async function (){

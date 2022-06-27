@@ -471,7 +471,7 @@ async function searchCountryWeather()
 {
   if(searchInput.value != '')
   {
-    let countryWeather=await fetch(`http://api.weatherapi.com/v1/search.json?key=14699c74a7e54078b78143249223005&q=${searchInput.value}`)
+    let countryWeather=await fetch(`https://api.weatherapi.com/v1/search.json?key=14699c74a7e54078b78143249223005&q=${searchInput.value}`)
     let response =await countryWeather.json();
     let cityName = '';
     for (let index = 0; index < response.length; index++) 

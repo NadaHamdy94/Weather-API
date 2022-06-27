@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather</title>
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg  py-4">
+            <div class="container-md">
+              <a class="navbar-brand d-flex" href="#home" >
+                  <div class="pic-logo  me-3">
+                    <img src="images/logo.png" alt="weather-logo">
+                  </div>
+                
+                <ul class="list-unstyled align-self-center">
+                    <li class="weather-word text-white">Weather</li>
+                    <li class="tagline-word">tagline goes here</li>
+                </ul>
+              </a>
+              <button class="navbar-toggler text-white rounded-circle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa fa-solid fa-bars text-white "></i></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item  me-2 first-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item me-2">
+                    <a class="nav-link" href="#">News</a>
+                  </li>
+                  <li class="nav-item me-2 ">
+                    <a class="nav-link" href="#">Live Cameras</a>
+                  </li>
+                  <li class="nav-item me-2">
+                    <a class="nav-link" href="#">Photos</a>
+                  </li>
+                  <li class="nav-item me-2 last-item">
+                    <a class="nav-link " href="#">Contact</a>
+                  </li>
+                  </ul>
+              </div>
+            </div>
+        </nav>
+
+        <section id="home">
+          
+            <div class="container">
+              <div class="py-5 search-box pb-5">
+                <div class="py-2">
+                  <form class="d-flex justify-content-between rounded-pill  p-1">
+                    <input class="form-control py-3 rounded-pill" id="searchInput" placeholder="Find Your Location..." />
+                    <button class="btn btn-find px-5 rounded-pill">Find</button>
+                  </form>
+                </div>
+              
+            </div>
+
+            <div class="forcast ">
+                  <div class="row gx-0">
+                    <div class="col-lg-4 ">
+                      <div class="toDay ">
+                        <div class="forcast-header d-flex justify-content-between px-3 py-2">
+                          <h5 id="currentDayName"></h5>
+                          <h5 id="currentDate"></h5>
+                        </div>
+                        <div class="forcast-content p-4">
+                          <div class="location py-2"></div>
+                          <div class="forcast-temp d-flex justify-content-between">
+                            <div class="num text-white pb-2" id="temp_c"></div>
+                            <div class="forcast-icon align-self-center"></div>
+                          </div>
+                          <div class="forcast-condition pb-3"></div>
+                         
+                          <div class="forcast-footer d-flex ">
+                            <div class="icon-umberella pe-4">
+                              <img src="images/icon-umberella.png" alt="icon-umberella">
+                              <span>20%</span>
+                            </div>
+                            <div class="icon-wind pe-4">
+                              <img src="images/icon-wind.png" alt="icon-wind">
+                              <span id="windSpeedInKilo"></span>
+                            </div>
+                            <div class="icon-compass pe-4">
+                              <img src="images/icon-compass.png" alt="icon-compass">
+                              <span id="windDirection"></span>
+                            </div>
+  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="col-lg-4 ">
+                      <div class="nextDay text-center">
+                        <div class="forcast-header px-3 py-2">
+                          <h5 id="nextDayName"></h5>
+                        </div>
+                        <div class="forcast-content p-4">
+                          <div class="forcast-icon pb-4 pt-5" id="iconNextDay"></div>
+                          <div class="forcast-temp pb-3">
+                            <div class="day-temp text-white" id="dayNextMaxTemp"></div>
+                            <div class="night-temp" id="dayNextMinaxTemp"></div>
+                          </div>
+                          <div class="forcast-condition pb-3" id="nextDayCondition"></div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="col-lg-4 ">
+                      <div class="dayAfterNext text-center">
+                        <div class="forcast-header px-3 py-2">
+                          <h5 id="dayAfterNextDayName"></h5>
+                        </div>
+                        <div class="forcast-content p-4">
+                          <div class="forcast-icon pb-4 pt-5" id="iconDayAfterNextDay"></div>
+                          <div class="forcast-temp pb-3">
+                            <div class="day-temp text-white" id="dayAfterNextMaxTemp"></div>
+                            <div class="night-temp" id="dayAfterNextMinTemp"></div>
+                          </div>
+                          <div class="forcast-condition pb-3" id="dayAfterNextDayCondition"></div>
+                        </div>
+                      </div>
+                    </div>
+  
+                  </div>
+            </div>
+            </div>
+
+            <footer class="mt-4">
+              <div class="container">
+                <div class="row">
+
+                  <div class="col-lg-8">
+                    <div class="search-input pt-5">
+                      <form class="d-flex justify-content-between rounded-pill  p-1">
+                        <input class="form-control py-3 rounded-pill" placeholder="Enter your email to subscribe..." />
+                        <button class="btn btn-find px-3 rounded-pill">Subscribe</button>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 offset-lg-1 social-network d-flex py-lg-5 justify-content-center">
+                    <a class="p-3 d-flex justify-content-center align-self-center rounded-circle me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="p-3 d-flex justify-content-center align-self-center rounded-circle me-2"><i class="fa-brands fa-twitter"></i></a>
+                    <a class="p-3 d-flex justify-content-center align-self-center rounded-circle me-2"><i class="fa-brands fa-google-plus"></i></a>
+                    <a class="p-3 d-flex justify-content-center align-self-center rounded-circle me-2"><i class="fa-brands fa-pinterest"></i></a>
+                  </div>
+
+                  <div class="copywrite-word pb-5 pt-lg-0 pt-2 text-lg-start text-center">Copyright 2014 Company name. Designed by Themezy. All rights reserved</div>
+                </div>
+              </div>
+            </footer>
+        
+        </section>
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

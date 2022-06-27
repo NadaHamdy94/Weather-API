@@ -1,0 +1,238 @@
+@font-face {
+    font-family:OpenSans ;
+    src: url(../webfonts/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family:OpenSansBold ;
+    src: url(../webfonts/OpenSans-Bold.ttf);
+}
+:root
+{
+    --main-color:rgb(0, 154, 216);
+}
+body
+{
+    font-family: 'OpenSans';
+    background-color: #1E202B;
+}
+/* nav bar  */
+nav 
+{
+    background-color: #1E202B;
+}
+.navbar-expand-lg .navbar-nav .nav-link 
+{
+    padding: 0;
+}
+.navbar-nav .nav-link 
+{
+    color: white;
+    font-size: 14px;
+    
+}
+.weather-word
+{
+    font-family: 'OpenSansBold';
+    font-size: 16px;
+}
+.tagline-word 
+{
+    font-size: 10px;
+    color: #bfc1c8;
+}
+.nav-item 
+{
+    border: 2px solid transparent;
+    padding: 0px 25px;
+    border-radius: 30px; 
+    transition:  border-color 1s ease-in;
+}
+.first-item
+{
+    border-color: var(--main-color);
+}
+.navbar-nav .active 
+{
+    color: var(--main-color);
+}
+.nav-item:focus, .nav-item:hover 
+{
+    border-color: var(--main-color);
+    padding: 0px 25px;
+    border-radius: 30px; 
+}
+.nav-link:focus, .nav-link:hover 
+{
+    color: var(--main-color);
+}
+@media screen and (max-width:991px){
+    .nav-item
+    {
+        background-color: #262936;
+        padding: 15px;
+        border-radius: 0;
+        border-bottom:solid 1px rgba(128, 128, 128, 0.346) ;
+        text-align: center;
+    }
+    .first-item
+    {
+        border-top-left-radius: 10px; 
+        border-top-right-radius: 10px;
+        border-color: transparent;
+        border-bottom:solid 1px rgba(128, 128, 128, 0.346) ;
+    }
+    .last-item
+    {
+        border-bottom-left-radius: 10px; 
+        border-bottom-right-radius: 10px;
+        border-bottom:solid 1px transparent ;
+    }
+    .nav-item:hover
+    {
+        border-color: transparent;
+        padding: 15px ;
+        border-radius: 0px; 
+        border-bottom:solid 1px rgba(128, 128, 128, 0.346) ;
+    }
+    .last-item:hover
+    {
+        border-color: transparent;
+    }
+}
+/* home */
+/* search box */
+#home 
+{
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+}
+form
+{
+    background-color: #1E202B;
+}
+.form-control
+{
+    background-color: #1E202B;
+    border: none;
+    color: white;
+    font-size: 14px;
+}
+.form-control:focus
+{
+    background-color: #1E202B;
+    border: none;
+    box-shadow: none;
+    color: white;
+}
+.btn-find
+{
+    background-color: var(--main-color);
+    color: white;
+}
+.btn-find:hover
+{
+    color: white;
+}
+/* Weather */
+.toDay .forcast-header 
+{
+    background-color: #2D303D;
+    border-top-left-radius: 5px;
+}
+.toDay .forcast-content
+{
+    background-color: #323544;
+    border-bottom-left-radius: 5px;
+} 
+ .forcast-header h5
+{
+    font-size: 14px;
+    color: #bfc1c8;
+}
+.location
+{
+    font-size: 18px;
+    color: #bfc1c8;
+}
+.toDay .num
+{
+    font-family: 'OpenSansBold';
+    font-size: 91px;
+}
+.forcast-condition 
+{
+    font-size: 14px;
+    color: #009ad8;
+}
+.forcast-footer span
+{
+    font-size: 14px;
+    color: #bfc1c8;
+}
+.nextDay .forcast-header
+{
+    background-color: #222531;
+}
+.nextDay .forcast-content
+{
+    background-color: #262936;
+}
+.day-temp 
+{
+    font-family: 'OpenSansBold';
+    font-size: 24px;
+}
+.night-temp
+{
+    color: #bfc1c8;
+}
+.dayAfterNext .forcast-header 
+{
+    background-color: #2D303D;
+    border-top-right-radius: 5px;
+}
+.dayAfterNext .forcast-content
+{
+    background-color: #323544;
+    border-bottom-right-radius: 5px;
+} 
+@media screen and (max-width:991px){
+    .toDay .forcast-header 
+    {
+        border-top-right-radius: 5px;
+    }
+    .toDay .forcast-content 
+    {
+        border-bottom-left-radius: 0px;
+    }
+    .dayAfterNext .forcast-header 
+    {
+        border-top-right-radius: 0px;
+    }
+    .dayAfterNext .forcast-content 
+    {
+        border-bottom-left-radius: 5px;
+    }
+}
+/* footer */
+footer
+{
+    background-color: #262936;
+}
+footer a
+{
+    background-color: #1E202B;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 1s;
+}
+footer a:hover
+{
+    background-color: rgb(0, 154, 216);
+    color: white;
+}
+.copywrite-word
+{
+    font-size: 14px;
+    color: #bfc1c8;
+}
